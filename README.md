@@ -10,7 +10,7 @@ Copy the LoadingwaveView files to your project
 
 ### With countdown time 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/shion0111/LoadingWaveView/master/wave.gif" height="480"/>
+  <img src="https://raw.githubusercontent.com/shion0111/LoadingWaveView/master/wave.gif" height="320"/>
 </p>
 
 ```objective-c
@@ -22,15 +22,22 @@ Copy the LoadingwaveView files to your project
     [self.view addSubview:loading];
 }
 ```
+### Without countdown time
 <p align="center">
-  <img src="https://raw.githubusercontent.com/shion0111/LoadingWaveView/master/wave1.gif" height="480"/>
+  <img src="https://raw.githubusercontent.com/shion0111/LoadingWaveView/master/wave1.gif" height="320"/>
 </p>
 
 ```objective-c
 #import "LoadingwaveView.h" 
-    
+@interface ViewController()
+@property (nonatmoic) LoadingwaveView *loading;
+@end
 - (IBAction)showLoading:(id)sender {
-    LoadingwaveView *loading = [[LoadingwaveView alloc] initWithTitle:@"Loading..." waveColor:UIColor.purpleColor] ;
+    _loading = [[LoadingwaveView alloc] initWithTitle:@"Loading..." waveColor:UIColor.purpleColor] ;
     [self.view addSubview:loading];
+}
+- (IBAction)dismissLoading:(id)sender {
+  [_loading dismiss];
+  _loading = nil;
 }
 ```
