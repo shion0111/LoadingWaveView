@@ -13,5 +13,5 @@
 - (instancetype)initWithTitle:(NSString *)title waveColor:(UIColor *)waveColor;
 - (void)pause;
 - (void)start;
-- (void)stop;
+- (void)dismiss;
 @end

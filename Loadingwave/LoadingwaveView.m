@@ -205,7 +205,7 @@ typedef CGFloat (^waveFunctionBlock)(CGFloat,CGFloat,CGFloat);
         __weak LoadingwaveView *weakSelf = self;
         [NSTimer scheduledTimerWithTimeInterval:_countdown repeats:NO block:^(NSTimer * _Nonnull timer) {
             LoadingwaveView *strongSelf = weakSelf;
-            [strongSelf dismissed];
+            [strongSelf dismiss];
         }];
         
         [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
@@ -234,7 +234,7 @@ typedef CGFloat (^waveFunctionBlock)(CGFloat,CGFloat,CGFloat);
 - (void)dealloc{
     [self stop];
 }
-- (void)dismissed{
+- (void)dismiss{
     
     __weak LoadingwaveView *weakSelf = self;
     [UIView animateWithDuration:1.0f delay:0.0 options:UIViewAnimationOptionCurveEaseInOut
