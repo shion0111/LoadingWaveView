@@ -6,7 +6,7 @@
 
 
 ## Usage
-Copy the LoadingwaveView files to your project
+Copy the LoadingwaveView.h and LoadingwaveView.w files to your project
 
 ### With countdown time 
 <p align="center">
