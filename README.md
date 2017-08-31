@@ -29,9 +29,11 @@ Copy the LoadingwaveView.h and LoadingwaveView.w files to your project
 
 ```objective-c
 #import "LoadingwaveView.h" 
+
 @interface ViewController()
 @property (nonatmoic) LoadingwaveView *loading;
 @end
+
 - (IBAction)showLoading:(id)sender {
     _loading = [[LoadingwaveView alloc] initWithTitle:@"Loading..." waveColor:UIColor.purpleColor] ;
     [self.view addSubview:loading];
