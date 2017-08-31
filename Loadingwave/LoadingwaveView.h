@@ -10,6 +10,7 @@
 
 @interface LoadingwaveView : UIView
 - (instancetype)initWithTitle:(NSString *)title countdown:(CGFloat)countdown waveColor:(UIColor *)waveColor;
+- (instancetype)initWithTitle:(NSString *)title waveColor:(UIColor *)waveColor;
 - (void)pause;
 - (void)start;
 - (void)stop;

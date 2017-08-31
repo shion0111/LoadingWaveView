@@ -21,7 +21,6 @@ typedef CGFloat (^waveFunctionBlock)(CGFloat,CGFloat,CGFloat);
 @end
 
 @implementation WaveLayer
-
 - (instancetype)initWithWaveDuration:(CGFloat)wduration withWaveFunctionBlock:(waveFunctionBlock) block
 {
     if ((self = [self init])) {
@@ -94,7 +93,10 @@ typedef CGFloat (^waveFunctionBlock)(CGFloat,CGFloat,CGFloat);
 
 @implementation LoadingwaveView
 
-
+- (instancetype)initWithTitle:(NSString *)title waveColor:(UIColor *)waveColor {
+    
+    return [self initWithTitle:title countdown:-1 waveColor:waveColor];
+}
 - (instancetype)initWithTitle:(NSString *)title countdown:(CGFloat)countdown waveColor:(UIColor *)waveColor
 {
     self = [super initWithFrame:CGRectMake(0, 0, 240, countdown>0?100:86)];

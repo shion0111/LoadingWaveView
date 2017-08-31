@@ -33,7 +33,7 @@
 }
 - (IBAction)showLoading:(id)sender{
     
-    _load = [[LoadingwaveView alloc] initWithTitle:@"Loading..." countdown:5.5 waveColor:UIColor.purpleColor] ;
+    _load = [[LoadingwaveView alloc] initWithTitle:@"Loading..." waveColor:UIColor.purpleColor] ;
     [self.view addSubview:_load];
     
     
